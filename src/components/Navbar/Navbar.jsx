@@ -14,16 +14,12 @@ const Navbar = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/about", label: "About Us" },
+    { to: "/aboutus", label: "About Us" },
     { to: "/service", label: "Service" },
     { to: "/models", label: "Models" },
     { to: "/contact", label: "Contact" },
   ];
 
-  const serviceLinks = [
-    { to: "/models", label: "PTM Machines" },
-    { to: "/service/net-link", label: "Net Link" },
-  ];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -40,18 +36,18 @@ const Navbar = () => {
   return (
     <header
       className={`w-full top-0 left-0 z-[100] transition-all duration-300 ${
-        isFixed ? "fixed bg-[#000000]" : "absolute bg-transparent"
+        isFixed ? "fixed" : "absolute bg-transparent"
       }`}
     >
       <nav className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center space-x-3">
-          <CircuitLogo className="w-14 h-14" />
+          {/* <CircuitLogo className="w-14 h-14" /> */}
           <div className="text-white font-bold whitespace-nowrap">
             <h1 className="text-xl block sm:hidden">
-              <span className="text-red-500">JIO</span> VENDOR
+              <span className="text-red-500">L</span>AW
             </h1>
             <h1 className="text-3xl hidden sm:block">
-              <span className="text-red-500">JIO</span> VENDOR
+              <span className="text-red-500">L</span>AW
             </h1>
           </div>
         </Link>
@@ -82,45 +78,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* Services + Split Dropdown Button */}
-          <li
-            className="relative flex items-center space-x-1"
-            ref={dropdownRef}
-          >
-            <Link
-              
-              className="bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-l-md flex items-center space-x-1 transition"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              <span>Products</span>
-            </Link>
-
-            {/* Right Arrow Button */}
-            <button
-              className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-r-md transition"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              <span>{dropdownOpen ? "▲" : "▼"}</span>
-            </button>
-
-            {/* Dropdown Menu */}
-            {dropdownOpen && (
-              <ul className="absolute top-full right-0 mt-2 bg-white text-black rounded shadow-lg w-52 z-50">
-                <hr className="my-1 border-gray-200" />
-                {serviceLinks.map((service) => (
-                  <li key={service.to}>
-                    <Link
-                      to={service.to}
-                      className="block px-4 py-2 hover:bg-gray-200"
-                      onClick={() => setDropdownOpen(false)}
-                    >
-                      {service.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
+         
         </ul>
 
         {/* Mobile Menu Button */}
