@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+@layer utilities {
+  @keyframes glow {
+    0% {
+      filter: brightness(1) drop-shadow(0 0 3px #0ff);
+    }
+    100% {
+      filter: brightness(1.3) drop-shadow(0 0 8px #0ff);
+    }
+  }
+
+  @keyframes fallingLight {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .animate-fallingLight {
+    animation: fallingLight 3s linear infinite;
+  }
+}

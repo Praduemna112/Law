@@ -1,0 +1,71 @@
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/vender_image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem; /* Padding for mobile screens */
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .hero-text button {
+    padding: 0.5rem 1.5rem; /* Smaller button for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.875rem;
+  }
+}.video-icon-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.video-icon-wrapper svg {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.video-icon-wrapper svg:hover {
+  transform: scale(1.1);
+}
+
+.video-player-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
