@@ -1,26 +1,66 @@
 import React from 'react';
+import friend1 from "../../assets/low/friend1.png";
+import friend2 from "../../assets/low/friend2.png";
+import Adv_Aarlin_Shetty from "../../assets/low/Adv_Aarlin_Shetty.png";
+import Adv_P_M_Deshmukh from "../../assets/low/Adv_P_M_Deshmukh.png";
+import Adv_Prashant_Parekh from "../../assets/low/Adv_Prashant_Parekh.png";
+import Adv_Shobhit_shetty from "../../assets/low/Adv_Shobhit_shetty.png";
+import heroBg from "../../assets/low/highCourt.png";
+
+// You can replace these with your actual image imports or public URLs
+const services = [
+  { name: "Friend", img: friend1 },
+  { name: "Friend", img: friend2 },
+  { name: "Adv.Aarlin Shetty", img: Adv_Aarlin_Shetty },
+  { name: "Adv.P.M.Deshmukh", img: Adv_P_M_Deshmukh },
+  { name: "Adv.Prashant Parekh", img: Adv_Prashant_Parekh },
+  { name: "Adv.Shobhit shetty", img: Adv_Shobhit_shetty },
+];
 
 const Service = () => {
   return (
-    <div className="w-full font-medium overflow-x-hidden">
-      {/* === HERO SECTION === */}
-      <section
-        id="hero"
-        className="relative w-full min-h-[45vh] sm:min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-pink-500 via-blue-400 to-yellow-400 flex flex-col items-center justify-center px-4"
-      >
-        <div className="absolute inset-0 bg-black opacity-30" />
-        <div className="relative z-10 flex flex-col items-center text-center mt-32 sm:mt-36 md:mt-44 lg:mt-52 gap-y-6 sm:gap-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
-            Service
-          </h1>
-          <p className="max-w-4xl text-base sm:text-lg md:text-xl text-white font-semibold px-2">
-            At PCB Technology, we offer a wide range of vending machine models,
-            allowing you to customize them to dispense a variety of products.
-          </p>
-          <div className="w-screen h-10 sm:h-14 md:h-20 bg-gradient-to-r from-orange-400 to-transparent rounded-tl-full rounded-tr-full" />
+    <>
+    <div id="hero" className="relative w-full pt-16">
+        {/* Mobile, Tablet, and Laptop: Show full image with no text */}
+        <img
+          src={heroBg}
+          alt="About Us Hero"
+          className="block xl:hidden w-full h-auto bg-fixed object-contain"
+        />
+
+        {/* XL Screens and above: Just show background image, no overlay */}
+        <div
+          className="hidden xl:flex w-full 
+               h-[600px] 
+               bg-fixed bg-bottom bg-cover 
+               items-center justify-center 
+               px-4 lg:px-8"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+          }}
+        ></div>
+      </div>
+
+      {/* === SERVICES GRID === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-10 py-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 text-gray-800">Our Colleague</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center bg-white p-4 shadow-md rounded-md hover:shadow-lg transition-shadow"
+            >
+              <img
+                src={service.img}
+                alt={service.name}
+                className="w-full h-48 sm:h-72 object-cover rounded-md" // Adjusting height and ensuring object-cover
+              />
+              <p className="text-lg font-semibold text-gray-700 mt-4">{service.name}</p>
+            </div>
+          ))}
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

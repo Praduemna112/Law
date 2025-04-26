@@ -34,9 +34,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full top-0 left-0 z-[100] transition-all duration-300 ${
-        isFixed ? "fixed" : "absolute bg-transparent"
-      }`}
+    className={`w-full top-0 left-0 z-[100] transition-all duration-300 ${isFixed ? "fixed bg-blue-950" : "absolute bg-blue-800"}`}
+
     >
       <nav className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center space-x-3">
@@ -83,7 +82,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div
           onClick={() => setNavOpen(true)}
-          className="md:hidden bg-pink-400 hover:bg-pink-600 text-white text-2xl p-2 rounded cursor-pointer ml-2"
+          className="md:hidden bg-blue-950 text-white text-2xl p-2 rounded cursor-pointer ml-2"
         >
           <AiOutlineMenu />
         </div>
@@ -117,38 +116,6 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-
-          {/* Services button in mobile */}
-          <li>
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-            >
-              <Link to="/service" onClick={() => setNavOpen(false)}>
-                Services
-              </Link>
-              <span>{mobileDropdownOpen ? "▲" : "▼"}</span>
-            </div>
-
-            {mobileDropdownOpen && (
-              <ul className="ml-4 mt-2 space-y-2">
-                {serviceLinks.map((service) => (
-                  <li key={service.to}>
-                    <Link
-                      to={service.to}
-                      onClick={() => {
-                        setNavOpen(false);
-                        setMobileDropdownOpen(false);
-                      }}
-                      className="text-sm text-gray-700"
-                    >
-                      {service.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
         </ul>
 
         {/* WhatsApp and Email Contacts */}
@@ -159,18 +126,18 @@ const Navbar = () => {
           <div className="flex flex-col space-y-2">
             {/* WhatsApp Contact with Icon */}
             <a
-              href="https://wa.me/9225812922"
+              href="https://wa.me/+919168111181"
               target="_blank"
-              rel="noopener noreferrer"
+              
               className="flex items-center space-x-2 text-green-600 font-medium hover:underline"
             >
               <FaWhatsapp className="text-xl" />
-              <span>9225812922</span>
+              <span>9168111181</span>
             </a>
 
             {/* Email Contact with Icon */}
             <a
-              href="mailto:support@jiovendor.com"
+              href="mailto:advssmd1975@gmail.com"
               className="flex items-center space-x-2 text-blue-600 font-medium hover:underline"
             >
               <AiOutlineMail className="text-xl" />

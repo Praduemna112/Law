@@ -10,7 +10,7 @@ const Email = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_d2tzp19", "template_nvyn0bf", form.current, {
+      .sendForm("service_tvfytmx", "template_h1ozcqa", form.current, {
         publicKey: "2w5y7-ykPIlQ-3UQk",
       })
       .then(
@@ -89,27 +89,6 @@ const Email = () => {
             rows="3"
             className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
           />
-        </div>
-
-        {/* Interest Section */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            You are interested in <span className="text-red-500">*</span>
-          </label>
-          <select
-            name="interest"
-            required
-            className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-          >
-            <option value="None">
-              --- Please Select ---
-            </option>
-            <option value="install_premises">I want to install your vending machines in my premises</option>
-            <option value="buy_or_start">I want to buy vending machines or start a vending business</option>
-            <option value="place_brand_products">I want to place my brand's products in your machines</option>
-            <option value="exclusive_brand_machines">I want to install exclusive machines with my brand's products</option>
-            <option value="customer_feedback">I am a customer, I have a feedback</option>
-          </select>
         </div>
 
         <button
