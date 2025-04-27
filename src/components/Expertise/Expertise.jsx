@@ -5,16 +5,21 @@ import Adv_Aarlin_Shetty from "../../assets/low/Adv_Aarlin_Shetty.png";
 import Adv_P_M_Deshmukh from "../../assets/low/Adv_P_M_Deshmukh.png";
 import Adv_Prashant_Parekh from "../../assets/low/Adv_Prashant_Parekh.png";
 import Adv_Shobhit_shetty from "../../assets/low/Adv_Shobhit_shetty.png";
+import Adv_B_G_Rathod from "../../assets/low/Adv_B_G_Rathod.png";
+import Satish from "../../assets/low/Satish.png";
 import heroBg from "../../assets/low/highCourt.png";
 
 // You can replace these with your actual image imports or public URLs
 const services = [
+  { name: "Adv.Satish", img: Satish },
   { name: "Adv.Sachin Bobde", img: Adv_Sachin_Bobde },
   { name: "Adv. Harshada Mohgaonkar", img: Adv_Harshada_Mohgaonkar },
   { name: "Adv.Aarlin Shetty", img: Adv_Aarlin_Shetty },
   { name: "Adv.P.M.Deshmukh", img: Adv_P_M_Deshmukh },
   { name: "Adv.Prashant Parekh", img: Adv_Prashant_Parekh },
   { name: "Adv.Shobhit shetty", img: Adv_Shobhit_shetty },
+  { name: "Adv_B_G_Rathod", img: Adv_B_G_Rathod },
+  
 ];
 
 const Service = () => {
