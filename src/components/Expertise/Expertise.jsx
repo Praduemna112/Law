@@ -1,6 +1,6 @@
 import React from 'react';
-import friend1 from "../../assets/low/friend1.png";
-import friend2 from "../../assets/low/friend2.png";
+import Adv_Sachin_Bobde from "../../assets/low/Adv_Sachin_Bobde.png";
+import Adv_Harshada_Mohgaonkar from "../../assets/low/Adv_Harshada_Mohgaonkar.png";
 import Adv_Aarlin_Shetty from "../../assets/low/Adv_Aarlin_Shetty.png";
 import Adv_P_M_Deshmukh from "../../assets/low/Adv_P_M_Deshmukh.png";
 import Adv_Prashant_Parekh from "../../assets/low/Adv_Prashant_Parekh.png";
@@ -9,8 +9,8 @@ import heroBg from "../../assets/low/highCourt.png";
 
 // You can replace these with your actual image imports or public URLs
 const services = [
-  { name: "Friend", img: friend1 },
-  { name: "Friend", img: friend2 },
+  { name: "Adv.Sachin Bobde", img: Adv_Sachin_Bobde },
+  { name: "Adv. Harshada Mohgaonkar", img: Adv_Harshada_Mohgaonkar },
   { name: "Adv.Aarlin Shetty", img: Adv_Aarlin_Shetty },
   { name: "Adv.P.M.Deshmukh", img: Adv_P_M_Deshmukh },
   { name: "Adv.Prashant Parekh", img: Adv_Prashant_Parekh },
