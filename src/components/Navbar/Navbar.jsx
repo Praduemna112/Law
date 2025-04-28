@@ -7,11 +7,12 @@ import { AiOutlineMail } from "react-icons/ai";
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(true);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // for desktop
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false); // for mobile
 
-  const dropdownRef = useRef(null); // Ref for dropdown
+  const dropdownRef = useRef(null);
 
-  // Close dropdown when clicking outside
+  // Close desktop dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -169,7 +170,9 @@ const Navbar = () => {
                   onClick={() => setNavOpen(false)}
                   className={({ isActive }) =>
                     `block py-2 relative ${
-                      isActive ? "underline underline-offset-8 decoration-2" : ""
+                      isActive
+                        ? "underline underline-offset-8 decoration-2"
+                        : ""
                     }`
                   }
                 >
@@ -181,26 +184,26 @@ const Navbar = () => {
             {/* Mobile Social Dropdown */}
             <li className="relative">
               <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
+                onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                 className="flex items-center py-2 w-full text-left"
               >
                 Social
                 <span
                   className={`ml-2 transition-transform duration-300 transform ${
-                    dropdownOpen ? "rotate-180" : "rotate-0"
+                    mobileDropdownOpen ? "rotate-180" : "rotate-0"
                   }`}
                 >
                   ⛛
                 </span>
               </button>
-              {dropdownOpen && (
+              {mobileDropdownOpen && (
                 <ul className="pl-4 mt-2 space-y-2">
                   <li>
                     <NavLink
                       to="/RRB"
                       onClick={() => {
-                        setDropdownOpen(false);
                         setNavOpen(false);
+                        setMobileDropdownOpen(false);
                       }}
                       className="block py-1 relative"
                     >
@@ -211,8 +214,8 @@ const Navbar = () => {
                     <NavLink
                       to="/BLOGS"
                       onClick={() => {
-                        setDropdownOpen(false);
                         setNavOpen(false);
+                        setMobileDropdownOpen(false);
                       }}
                       className="block py-1 relative"
                     >
@@ -245,7 +248,6 @@ const Navbar = () => {
               Contact Us
             </h3>
             <div className="flex flex-col space-y-2">
-              {/* WhatsApp */}
               <a
                 href="https://wa.me/+919168111181"
                 target="_blank"
@@ -256,7 +258,6 @@ const Navbar = () => {
                 <span>9168111181</span>
               </a>
 
-              {/* Email */}
               <a
                 href="mailto:advssmd1975@gmail.com"
                 className="flex items-center space-x-2 text-blue-600 font-medium hover:underline"
