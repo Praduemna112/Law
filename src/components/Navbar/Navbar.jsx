@@ -47,10 +47,10 @@ const Navbar = () => {
         <NavLink to="/" className="flex items-center space-x-3">
           <div className="text-white font-bold whitespace-nowrap">
             <h1 className="text-xl block sm:hidden">
-            <span className="text-red-500">L</span>AW <span className="text-red-500">L</span>egends
+            <span className="text-red-500">L</span>aw <span className="text-red-500">L</span>egends
             </h1>
             <h1 className="text-3xl hidden sm:block">
-              <span className="text-red-500">L</span>AW <span className="text-red-500">L</span>egends
+              <span className="text-red-500">L</span>aw <span className="text-red-500">L</span>egends
             </h1>
           </div>
         </NavLink>
