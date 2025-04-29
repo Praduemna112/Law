@@ -10,16 +10,12 @@ const RRB = () => {
           className="relative w-full h-64 sm:h-96 bg-cover bg-center flex items-center justify-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-10"></div> {/* Reduced opacity */}
+
           <h1 className="relative z-10 text-white text-3xl sm:text-5xl font-extrabold text-center px-4">
             Welcome to Ram Ramapati Bank
           </h1>
         </div>
-      </div>
-
-      {/* HEADING */}
-      <div className="bg-gradient-to-r from-yellow-100 to-pink-200 text-gray-900 text-center text-2xl sm:text-4xl font-bold rounded-xl mx-4 mt-12 px-6 py-10 sm:py-16 shadow-md">
-        RAM RAMAPATI BANK
       </div>
 
       {/* CONTENT SECTION */}
