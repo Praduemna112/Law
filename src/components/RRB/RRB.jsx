@@ -22,7 +22,7 @@ const RRB = () => {
       <div className="flex flex-col lg:flex-row gap-10 px-4 py-12 lg:px-20">
         {/* LEFT: ABOUT */}
         <div className="lg:w-1/2 bg-white shadow-lg rounded-2xl p-6 sm:p-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4 border-b-2 border-yellow-300 pb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4 text-center border-b-2 border-yellow-300 pb-2">
             About the Bank
           </h2>
           <p className="text-base sm:text-lg leading-relaxed text-gray-700">
