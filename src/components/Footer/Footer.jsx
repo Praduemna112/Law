@@ -11,7 +11,7 @@ const hoverGradient = "duration-300 hover:text-red-500";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 py-8 px-4">
+    <footer className="bg-orange-400 py-8 px-4">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo + Social Section */}
         <div className="col-span-1">
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Links Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 col-span-1 text-white md:col-span-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 col-span-1 text-black md:col-span-3">
           {/* Company Links */}
           <div className="col-span-1 mb-6 md:mb-0">
             <h3 className="font-bold mb-3 text-lg">Quick Links</h3>

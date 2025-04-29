@@ -41,17 +41,17 @@ const Navbar = () => {
   return (
     <header
       className={`w-full top-0 left-0 z-[100] transition-all duration-300 ${
-        isFixed ? "fixed bg-blue-950" : "absolute bg-blue-800"
+        isFixed ? "fixed bg-orange-500" : "absolute bg-yellow-950"
       }`}
     >
       <nav className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <NavLink to="/" className="flex items-center space-x-3">
           <div className="text-white font-bold whitespace-nowrap">
             <h1 className="text-xl block sm:hidden">
-            <span className="text-red-500">L</span>aw <span className="text-red-500">L</span>egends
+            <span className="text-blue-900">L</span>aw <span className="text-red-500">L</span>egends
             </h1>
             <h1 className="text-3xl hidden sm:block">
-              <span className="text-red-500">L</span>aw <span className="text-red-500">L</span>egends
+              <span className="text-blue-700">L</span>aw <span className="text-blue-700">L</span>egends
             </h1>
           </div>
         </NavLink>
