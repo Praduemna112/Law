@@ -10,7 +10,7 @@ import Satish from "../../assets/low/Satish.png";
 import heroBg from "../../assets/low/highCourt.png";
 
 const services = [
-  { name: "Adv. Satish", img: Satish },
+  { name: "Adv. Satish Muchalamkar", img: Satish },
   { name: "Adv. Sachin Bobde", img: Adv_Sachin_Bobde },
   { name: "Adv. Harshada Mohgaonkar", img: Adv_Harshada_Mohgaonkar },
   { name: "Adv. Aarlin Shetty", img: Adv_Aarlin_Shetty },
