@@ -5,17 +5,17 @@ import Email from "./Email";
 
 const Contact = () => {
   return (
-    <div className="w-full font-medium pt-28 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-10">
+    <div className="w-full font-medium pt-24 sm:pt-28 bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-10">
-          {/* LEFT: Map on top, Email below */}
-          <div className="w-full lg:w-2/3 bg-gray-100 p-6 rounded-lg shadow-md">
+          {/* LEFT: Map + Email */}
+          <div className="w-full lg:w-2/3 bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md">
             {/* Map */}
             <div className="w-full mb-6">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3697.610427975973!2d75.887334!3d17.671018999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQwJzE1LjciTiA3NcKwNTMnMTQuNCJF!5e1!3m2!1sen!2sin!4v1743860324236!5m2!1sen!2sin"
                 width="100%"
-                height="350"
+                height="300"
                 className="rounded-md shadow"
                 allowFullScreen
                 loading="lazy"
@@ -28,16 +28,20 @@ const Contact = () => {
             <Email />
           </div>
 
-          {/* RIGHT: Contact Text */}
+          {/* RIGHT: Text Details */}
           <div className="w-full lg:w-1/3">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-6">
               Give us a shout!
             </h2>
 
-            <ul className="space-y-5 text-base sm:text-lg">
+            <ul className="space-y-4 text-sm sm:text-base md:text-lg">
               <li>
-                Drop by the office: S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD,
-                OPP - CIPLA BUS STOP, NEAR – MAULI MEDICAL, WARJE, PUNE-411058;
+                Drop by the office:<br />
+                <span className="text-gray-700">
+                  S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD,<br />
+                  OPP - CIPLA BUS STOP, NEAR – MAULI MEDICAL,<br />
+                  WARJE, PUNE-411058
+                </span>
               </li>
               <li>
                 <a
@@ -52,8 +56,8 @@ const Contact = () => {
               <li>Or reach us at:</li>
             </ul>
 
-            <ul className="mt-6 space-y-4 text-base sm:text-lg">
-              <li className="flex items-center gap-2">
+            <ul className="mt-6 space-y-4 text-sm sm:text-base md:text-lg">
+              <li className="flex items-center gap-2 flex-wrap">
                 <span>Customer Care Number:</span>
                 <FaWhatsapp className="text-green-500" />
                 <a
@@ -65,7 +69,7 @@ const Contact = () => {
                   +91 9168111181
                 </a>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 flex-wrap">
                 <span>Email:</span>
                 <IoMail className="text-red-500" />
                 <a
@@ -79,7 +83,7 @@ const Contact = () => {
               </li>
             </ul>
 
-            <p className="mt-6 text-base sm:text-lg">
+            <p className="mt-6 text-sm sm:text-base md:text-lg text-gray-700">
               Connect with us and inquire about Smart Micro Retail Solutions for
               your facility.
             </p>

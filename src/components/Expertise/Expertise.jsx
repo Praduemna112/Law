@@ -23,22 +23,14 @@ const services = [
 const Service = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <div id="hero" className="relative w-full pt-16">
-        {/* Mobile to LG */}
-        <img
-          src={heroBg}
-          alt="About Us Hero"
-          className="block xl:hidden w-full h-auto object-cover"
-        />
-
-        {/* XL and up */}
-        <div
-          className="hidden xl:flex w-full h-[600px] bg-fixed bg-center bg-cover items-center justify-center"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-          }}
-        ></div>
+      <div
+        id="hero"
+        className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px] xl:h-[600px] bg-cover bg-no-repeat flex items-top justify-center hero-bg-custom"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+        }}
+      >
+        
       </div>
 
       {/* SERVICES GRID SECTION */}
