@@ -1,5 +1,5 @@
 import React from 'react';
-import heroBg from '../../assets/low/ram_bank.png';
+import heroBg from '../../assets/low/ram.png';
 
 const RRB = () => {
   return (
