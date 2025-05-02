@@ -292,7 +292,7 @@ const Navbar = () => {
                 <span>advssmd1975@gmail.com</span>
               </a>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
     </header>

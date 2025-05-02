@@ -1,5 +1,6 @@
 import React from "react";
 import heroBg from "../../assets/low/about.png";
+import heroBg1 from "../../assets/low/about1.png";
 import sir_mission from "../../assets/low/sir_mission.png";
 import EXPERIENCE_TAGLINE from "../../assets/low/EXPERIENCE_TAGLINE.png";
 
@@ -7,12 +8,12 @@ const AboutUs = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <div id="hero" className="relative w-full ">
+      <div id="hero" className="relative w-full h-auto">
         {/* Mobile & Tablet Image */}
         <img
-          src={heroBg}
+          src={heroBg1}
           alt="Practices Hero"
-          className="block xl:hidden w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
+          className="block xl:hidden w-full h-full object-cover object-center"
         />
 
         {/* Desktop Background Image */}
@@ -20,6 +21,8 @@ const AboutUs = () => {
           className="hidden xl:flex w-full h-[500px] bg-cover bg-center items-center justify-center px-4 lg:px-8"
           style={{
             backgroundImage: `url(${heroBg})`,
+            backgroundPosition: "bottom center", // Adjusts the image to start from top-center
+            backgroundSize: "cover",
           }}
         >
           {/* Optional: You can put text or overlay here if needed */}

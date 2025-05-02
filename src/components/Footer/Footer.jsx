@@ -11,18 +11,18 @@ const hoverGradient = "duration-300 hover:text-black hover:underline";
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-400 py-8 px-4">
+    <footer className="bg-orange-400 py-8 px-4 sm:px-6 md:px-8 lg:px-16">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo + Social Section */}
-        <div className="col-span-1">
+        <div className="col-span-1 text-center sm:text-left">
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 mb-4">
-            <h2 className="text-2xl font-bold bg-gradient-to-tr text-white bg-clip-text">
-            <span className="text-blue-700">L</span>aw{" "}
-            <span className="text-blue-700">L</span>egends
+            <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-tr text-white bg-clip-text">
+              <span className="text-blue-700">L</span>aw{" "}
+              <span className="text-blue-700">L</span>egends
             </h2>
           </div>
           <p className={`text-base text-white mb-4 ${hoverGradient}`}></p>
-          <div className="flex space-x-3 mt-2">
+          <div className="flex justify-center sm:justify-start space-x-3 mt-2">
             <a
               href="https://www.facebook.com/"
               target="_blank"
@@ -67,8 +67,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 col-span-1 text-black md:col-span-3">
           {/* Company Links */}
           <div className="col-span-1 mb-6 md:mb-0">
-            <h3 className="font-bold mb-3 text-lg">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="font-bold mb-3 text-lg sm:text-xl">Quick Links</h3>
+            <ul className="space-y-2 text-sm sm:text-base">
               <li>
                 <Link to="/aboutus" className={hoverGradient}>
                   About Us
@@ -89,18 +89,19 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="col-span-1 sm:col-span-1 mb-6 md:mb-0">
-            <h3 className="font-bold mb-3 text-lg">Contact</h3>
-            <p className={`text-sm break-words ${hoverGradient}`}>
-              Main Office: S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD, OPP - CIPLA BUS STOP, NEAR – MAULI MEDICAL, WARJE, PUNE-411058
+            <h3 className="font-bold mb-3 text-lg sm:text-xl">Contact</h3>
+            <p className={`text-sm sm:text-base break-words ${hoverGradient}`}>
+              Main Office: S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD, OPP - CIPLA
+              BUS STOP, NEAR – MAULI MEDICAL, WARJE, PUNE-411058
             </p>
-            <p className="text-sm mt-2">Mobile no: 9168111181</p>
-            <p className="text-sm">Email: advssmd1975@gmail.com</p>
+            <p className="text-sm sm:text-base mt-2">Mobile no: 9168111181</p>
+            <p className="text-sm sm:text-base">Email: advssmd1975@gmail.com</p>
             <p className="mt-2">
               <a
                 href="https://maps.app.goo.gl/JjZmPE93rFyCaDnj6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center text-sm ${hoverGradient}`}
+                className={`flex items-center text-sm sm:text-base ${hoverGradient}`}
               >
                 Get Directions
                 <FaMapMarkerAlt className="ml-2 text-red-600" />
@@ -110,24 +111,23 @@ const Footer = () => {
 
           {/* Map Section */}
           <div className="col-span-1 sm:col-span-1">
-            <p className="text-lg text-black mb-2">Location Map:</p>
+            <p className="text-lg sm:text-xl text-black mb-2">Location Map:</p>
             <div className="w-full h-40 sm:h-60 md:h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3697.610427975973!2d75.887334!3d17.671018999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQwJzE1LjciTiA3NcKwNTMnMTQuNCJF!5e1!3m2!1sen!2sin!4v1743860324236!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.02829517154578!2d73.79874176558258!3d18.48731584651019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf23e39880e3%3A0x694aa0978f13aaa8!2sSairam%20Park!5e1!3m2!1sen!2sin!4v1746191832985!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
-                className="rounded-md shadow-lg"
-                allowFullScreen
+                style={{ border: 0 }}
+                allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Map Location"
               ></iframe>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-gray-300 mt-8 pt-4 text-center text-sm text-black">
+      <div className="border-t border-gray-300 mt-8 pt-4 text-center text-sm sm:text-base text-black">
         © 2025 LAW. All rights reserved.
       </div>
     </footer>

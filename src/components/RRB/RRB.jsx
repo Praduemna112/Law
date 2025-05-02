@@ -1,18 +1,24 @@
-import React from 'react';
-import heroBg from '../../assets/low/ram.png';
+import React from "react";
+import heroBg from "../../assets/low/ram.png";
 
 const RRB = () => {
   return (
     <div className="text-gray-800 font-sans">
       {/* HERO SECTION */}
-      <div id="hero" className="relative w-full pt-16">
-        <div
-          className="relative w-full h-64 sm:h-96 bg-cover bg-center flex items-center justify-center"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-10"></div> {/* Reduced opacity */}
+      <div id="hero" className="relative w-full h-[300px] sm:h-[400px] xl:h-[500px]">
+        {/* Background Image (visible on all screens) */}
+        <img
+          src={heroBg}
+          alt="Practices Hero"
+          className="w-full h-full object-cover object-center"
+        />
 
-          <h1 className="relative z-10 text-white text-3xl sm:text-5xl font-extrabold text-center px-4">
+        {/* Overlay (optional) */}
+        <div className="absolute inset-0"></div>
+
+        {/* Centered Text */}
+        <div className="absolute inset-0 flex items-center justify-center px-4">
+          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold text-center drop-shadow-lg">
             Welcome to Ram Ramapati Bank
           </h1>
         </div>
@@ -28,8 +34,8 @@ const RRB = () => {
           <p className="text-base sm:text-lg leading-relaxed text-gray-700">
             Ram Ramapati Bank is a spiritual institution that doesn’t deal with traditional currency.
             Instead, it welcomes handwritten “Ram-Ram” in sacred red ink as devotional offerings.
-            These offerings are regarded as deposits of virtue. Devotees contribute in multiples
-            of 108 or 111, reflecting spiritual merit and devotion.
+            These offerings are regarded as deposits of virtue. Devotees contribute in multiples of
+            108 or 111, reflecting spiritual merit and devotion.
           </p>
         </div>
 

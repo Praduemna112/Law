@@ -13,14 +13,13 @@ const Contact = () => {
             {/* Map */}
             <div className="w-full mb-6">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3697.610427975973!2d75.887334!3d17.671018999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQwJzE1LjciTiA3NcKwNTMnMTQuNCJF!5e1!3m2!1sen!2sin!4v1743860324236!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.02829517154578!2d73.79874176558258!3d18.48731584651019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf23e39880e3%3A0x694aa0978f13aaa8!2sSairam%20Park!5e1!3m2!1sen!2sin!4v1746191832985!5m2!1sen!2sin"
                 width="100%"
-                height="300"
-                className="rounded-md shadow"
-                allowFullScreen
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Map Location"
               ></iframe>
             </div>
 
@@ -29,17 +28,20 @@ const Contact = () => {
           </div>
 
           {/* RIGHT: Text Details */}
-          <div className="w-full lg:w-1/3">
+          <div className="w-full lg:w-1/3 flex flex-col space-y-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-6">
               Give us a shout!
             </h2>
 
             <ul className="space-y-4 text-sm sm:text-base md:text-lg">
               <li>
-                Drop by the office:<br />
+                Drop by the office:
+                <br />
                 <span className="text-gray-700">
-                  S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD,<br />
-                  OPP - CIPLA BUS STOP, NEAR – MAULI MEDICAL,<br />
+                  S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD,
+                  <br />
+                  OPP - CIPLA BUS STOP, NEAR – MAULI MEDICAL,
+                  <br />
                   WARJE, PUNE-411058
                 </span>
               </li>
