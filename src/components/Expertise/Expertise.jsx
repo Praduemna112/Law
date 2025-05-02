@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar"; // adjust the path as needed
+
 import Adv_Sachin_Bobde from "../../assets/low/Adv_Sachin_Bobde.png";
 import Adv_Harshada_Mohgaonkar from "../../assets/low/Adv_Harshada_Mohgaonkar.png";
 import Adv_Aarlin_Shetty from "../../assets/low/Adv_Aarlin_Shetty.png";
@@ -7,7 +9,8 @@ import Adv_Prashant_Parekh from "../../assets/low/Adv_Prashant_Parekh.png";
 import Adv_Shobhit_shetty from "../../assets/low/Adv_Shobhit_shetty.png";
 import Adv_B_G_Rathod from "../../assets/low/Adv_B_G_Rathod.png";
 import Satish from "../../assets/low/Satish.png";
-import heroBg from "../../assets/low/highCourt.png";
+import heroBg from "../../assets/low/highCourt1.png";
+
 
 const services = [
   { name: "Adv. Satish Muchalamkar", img: Satish },
@@ -20,18 +23,18 @@ const services = [
   { name: "Adv. B. G. Rathod", img: Adv_B_G_Rathod },
 ];
 
-const Service = () => {
+const Expertise = () => {
   return (
     <>
       <div
         id="hero"
-        className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px] xl:h-[600px] bg-cover bg-no-repeat flex items-top justify-center hero-bg-custom"
+        className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px] xl:h-[600px] bg-cover bg-no-repeat flex items-top justify-center"
         style={{
           backgroundImage: `url(${heroBg})`,
+          backgroundPosition: "top center",
+          backgroundSize: "cover",
         }}
-      >
-        
-      </div>
+      />
 
       {/* SERVICES GRID SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -65,4 +68,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Expertise;

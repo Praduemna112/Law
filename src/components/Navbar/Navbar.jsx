@@ -1,35 +1,28 @@
 import React, { useState, useRef, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [isFixed, setIsFixed] = useState(true);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // for desktop
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false); // for mobile
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   const dropdownRef = useRef(null);
+  const location = useLocation();
 
-  // Close desktop dropdown when clicking outside
+  // Check if the current path is a social route
+  const isSocialRoute = location.pathname.startsWith("/social");
+
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-    };
-
-    if (dropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+    // Set mobileDropdownOpen to true if the route is within social
+    if (isSocialRoute) {
+      setMobileDropdownOpen(true);
     } else {
-      document.removeEventListener("mousedown", handleClickOutside);
+      setMobileDropdownOpen(false);
     }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [dropdownOpen]);
+  }, [location.pathname, isSocialRoute]); // Runs when the location changes
 
   const navLinks = [
     { to: "/", label: "Home" },
@@ -40,18 +33,18 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full top-0 left-0 z-[100] transition-all duration-300 ${
-        isFixed ? "fixed bg-orange-500" : "absolute bg-yellow-950"
-      }`}
+      className={`w-full top-0 left-0 z-[100] transition-all duration-300 bg-orange-500`}
     >
       <nav className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <NavLink to="/" className="flex items-center space-x-3">
           <div className="text-white font-bold whitespace-nowrap">
             <h1 className="text-xl block sm:hidden">
-            <span className="text-blue-900">L</span>aw <span className="text-red-500">L</span>egends
+              <span className="text-blue-900">L</span>aw{" "}
+              <span className="text-blue-700">L</span>egends
             </h1>
             <h1 className="text-3xl hidden sm:block">
-              <span className="text-blue-700">L</span>aw <span className="text-blue-700">L</span>egends
+              <span className="text-blue-700">L</span>aw{" "}
+              <span className="text-blue-700">L</span>egends
             </h1>
           </div>
         </NavLink>
@@ -66,7 +59,7 @@ const Navbar = () => {
                   `flex items-center transition duration-300 relative ${
                     isActive
                       ? "underline underline-offset-8 decoration-2 text-white"
-                      : "hover:text-red-500"
+                      : "text-black hover:text-black hover:underline hover:underline-offset-8"
                   }`
                 }
               >
@@ -79,22 +72,32 @@ const Navbar = () => {
           <li className="relative hover:text-red-500" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="flex items-center text-base lg:text-lg font-medium hover:text-red-500 text-white"
+              className="flex items-center text-base lg:text-lg font-medium transition duration-300 relative"
             >
-              Social
               <span
-                className={`ml-2 transition-transform duration-300 transform ${
+                className={`transition duration-300 ${
+                  isSocialRoute
+                    ? "underline underline-offset-8 decoration-2 text-white"
+                    : "text-black hover:text-white hover:underline hover:underline-offset-8"
+                }`}
+              >
+                Social
+              </span>
+              <span
+                className={`ml-2 transition-transform duration-300 transform text-black  ${
                   dropdownOpen ? "rotate-180" : "rotate-0"
                 }`}
+                style={{ textDecoration: "none" }}
               >
                 ⛛
               </span>
             </button>
+
             {dropdownOpen && (
               <ul className="absolute left-0 top-full rounded-2xl bg-white shadow-lg w-40 mt-2 z-[200]">
                 <li>
                   <NavLink
-                    to="/RRB"
+                    to="/social/rrb"
                     onClick={() => setDropdownOpen(false)}
                     className="block px-4 py-2 text-black hover:rounded-2xl hover:bg-gray-300"
                   >
@@ -104,7 +107,7 @@ const Navbar = () => {
                 <li className="border-t border-gray-300 mx-2"></li>
                 <li>
                   <NavLink
-                    to="/BLOGS"
+                    to="/social/blogs"
                     onClick={() => setDropdownOpen(false)}
                     className="block px-4 py-2 text-black hover:rounded-2xl hover:bg-gray-300"
                   >
@@ -123,7 +126,7 @@ const Navbar = () => {
                 `flex items-center transition duration-300 relative ${
                   isActive
                     ? "underline underline-offset-8 decoration-2 text-white"
-                    : "hover:text-red-500"
+                    : "text-black hover:text-black hover:underline hover:underline-offset-8"
                 }`
               }
             >
@@ -172,8 +175,8 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     `block py-2 relative ${
                       isActive
-                        ? "underline underline-offset-8 decoration-2"
-                        : ""
+                        ? "underline underline-offset-8 decoration-2 decoration-black"
+                        : "hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-gray-800"
                     }`
                   }
                 >
@@ -188,7 +191,15 @@ const Navbar = () => {
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                 className="flex items-center py-2 w-full text-left"
               >
-                Social
+                <span
+                  className={`transition duration-300 ${
+                    isSocialRoute
+                      ? "underline underline-offset-8 decoration-2 decoration-black"
+                      : "hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-gray-800"
+                  }`}
+                >
+                  Social
+                </span>
                 <span
                   className={`ml-2 transition-transform duration-300 transform ${
                     mobileDropdownOpen ? "rotate-180" : "rotate-0"
@@ -201,24 +212,36 @@ const Navbar = () => {
                 <ul className="pl-4 mt-2 space-y-2">
                   <li>
                     <NavLink
-                      to="/RRB"
+                      to="/social/rrb"
                       onClick={() => {
                         setNavOpen(false);
                         setMobileDropdownOpen(false);
                       }}
-                      className="block py-1 relative"
+                      className={({ isActive }) =>
+                        `block py-1 relative ${
+                          isActive
+                            ? "underline underline-offset-8 decoration-2 decoration-black"
+                            : "hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-gray-800"
+                        }`
+                      }
                     >
                       RRB
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      to="/BLOGS"
+                      to="/social/blogs"
                       onClick={() => {
                         setNavOpen(false);
                         setMobileDropdownOpen(false);
                       }}
-                      className="block py-1 relative"
+                      className={({ isActive }) =>
+                        `block py-1 relative ${
+                          isActive
+                            ? "underline underline-offset-8 decoration-2 decoration-black"
+                            : "hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-gray-800"
+                        }`
+                      }
                     >
                       BLOGS
                     </NavLink>
@@ -234,7 +257,9 @@ const Navbar = () => {
                 onClick={() => setNavOpen(false)}
                 className={({ isActive }) =>
                   `block py-2 relative ${
-                    isActive ? "underline underline-offset-8 decoration-2" : ""
+                    isActive
+                      ? "underline underline-offset-8 decoration-2 decoration-black"
+                      : "hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-gray-800"
                   }`
                 }
               >

@@ -45,8 +45,8 @@ const ScrollRestorationWrapper = () => {
         <Route path="/Expertise" element={<Expertise />} />
         <Route path="/Social" element={<Social />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/rrb" element={<RRB />} />
-        <Route path="/blogs" element={<BLOGS />} />
+        <Route path="/social/rrb" element={<RRB />} />
+        <Route path="/social/blogs" element={<BLOGS />} />
       </Routes>
       <Footer />
     </>

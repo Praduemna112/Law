@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-const hoverGradient = "duration-300 hover:text-red-500";
+const hoverGradient = "duration-300 hover:text-black hover:underline";
 
 const Footer = () => {
   return (
@@ -17,7 +17,8 @@ const Footer = () => {
         <div className="col-span-1">
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 mb-4">
             <h2 className="text-2xl font-bold bg-gradient-to-tr text-white bg-clip-text">
-              <span className="text-red-500">L</span>AW
+            <span className="text-blue-700">L</span>aw{" "}
+            <span className="text-blue-700">L</span>egends
             </h2>
           </div>
           <p className={`text-base text-white mb-4 ${hoverGradient}`}></p>
@@ -109,7 +110,7 @@ const Footer = () => {
 
           {/* Map Section */}
           <div className="col-span-1 sm:col-span-1">
-            <p className="text-white mb-2">Location Map:</p>
+            <p className="text-lg text-black mb-2">Location Map:</p>
             <div className="w-full h-40 sm:h-60 md:h-80">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3697.610427975973!2d75.887334!3d17.671018999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQwJzE1LjciTiA3NcKwNTMnMTQuNCJF!5e1!3m2!1sen!2sin!4v1743860324236!5m2!1sen!2sin"
@@ -126,7 +127,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-gray-300 mt-8 pt-4 text-center text-sm text-gray-200">
+      <div className="border-t border-gray-300 mt-8 pt-4 text-center text-sm text-black">
         © 2025 LAW. All rights reserved.
       </div>
     </footer>
