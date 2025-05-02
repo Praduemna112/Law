@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <div id="hero" className="relative w-full pt-16">
+      <div id="hero" className="relative w-full ">
         {/* Mobile & Tablet Image */}
         <img
           src={heroBg}

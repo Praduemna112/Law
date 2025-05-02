@@ -28,7 +28,7 @@ const Expertise = () => {
     <>
       <div
         id="hero"
-        className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px] xl:h-[600px] bg-cover bg-no-repeat flex items-top justify-center"
+        className="relative w-full h-60 sm:h-80 md:h-[400px] lg:h-[500px] xl:h-[600px] bg-cover bg-no-repeat flex items-top justify-center"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: "top center",
