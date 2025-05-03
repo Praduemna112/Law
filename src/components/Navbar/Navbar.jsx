@@ -138,7 +138,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div
           onClick={() => setNavOpen(true)}
-          className="md:hidden bg-blue-950 text-white text-2xl p-2 rounded cursor-pointer ml-2"
+          className="md:hidden bg-orange-700 text-white text-2xl p-2 rounded cursor-pointer ml-2"
         >
           <AiOutlineMenu />
         </div>

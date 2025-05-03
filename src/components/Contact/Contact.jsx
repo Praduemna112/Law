@@ -11,7 +11,8 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row gap-10">
           {/* LEFT: Map + Email */}
           <div className="w-full lg:w-2/3 bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md">
-            {/* Map */}
+          <p className="text-2xl font-bold mb-4">Location:-</p>
+            {/* Map */} 
             <div className="w-full mb-6">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.02829517154578!2d73.79874176558258!3d18.48731584651019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf23e39880e3%3A0x694aa0978f13aaa8!2sSairam%20Park!5e1!3m2!1sen!2sin!4v1746191832985!5m2!1sen!2sin"
@@ -97,11 +98,7 @@ const Contact = () => {
                 </a>
               </li>
             </ul>
-
-            <p className="mt-6 text-sm sm:text-base md:text-lg text-gray-700">
-              Connect with us and inquire about Smart Micro Retail Solutions for
-              your facility.
-            </p>
+            <br />
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ const hoverGradient = "duration-300 hover:text-black hover:underline";
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-400 py-8 px-4 sm:px-6 md:px-8 lg:px-16">
+    <footer className="bg-orange-400 py-6 px-3 sm:px-6 md:px-8 lg:px-16">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo + Social Section */}
         <div className="col-span-1 text-center sm:text-left">
@@ -22,8 +22,7 @@ const Footer = () => {
               <span className="text-black">L</span>egends
             </h2>
           </div>
-          <p className={`text-base text-white mb-4 ${hoverGradient}`}></p>
-          <div className="flex justify-center sm:justify-start space-x-3 mt-2">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-3 mt-2">
             <a
               href="https://www.facebook.com/"
               target="_blank"
@@ -61,25 +60,22 @@ const Footer = () => {
             >
               <AiOutlineMail className="text-xl sm:text-2xl" />
             </a>
-            <br />
-            <br />
-            <br />
           </div>
-          <div className="flex flex-col items-center sm:items-start text-center sm:text-center">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-center mt-4">
             <img
               src={Notary3}
               alt="Adv. Satish Muchalamkar"
-              className="w-32 h-32 rounded-full object-cover mb-2 shadow-md ml-11" // <-- added ml-4
+              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover mb-2 shadow-md"
             />
-            <p className="text-lg font-bold text-black items-center text-center">
+            <p className="text-base sm:text-lg font-bold text-black text-center">
               Adv. Satish Muchalamkar
             </p>
           </div>
         </div>
 
         {/* Footer Links Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 col-span-1 text-black md:col-span-3">
-          {/* Company Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 col-span-1 text-black md:col-span-3">
+          {/* Quick Links */}
           <div className="col-span-1 mb-6 md:mb-0">
             <h3 className="font-bold mb-3 text-lg sm:text-xl">Quick Links</h3>
             <ul className="space-y-2 text-sm sm:text-base">
@@ -115,7 +111,7 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/JjZmPE93rFyCaDnj6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center text-sm sm:text-base ${hoverGradient}`}
+                className={`flex items-center justify-center sm:justify-start text-sm sm:text-base ${hoverGradient}`}
               >
                 Get Directions
                 <FaMapMarkerAlt className="ml-2 text-red-600" />
