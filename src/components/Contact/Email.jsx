@@ -10,8 +10,8 @@ const Email = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_tvfytmx", "template_h1ozcqa", form.current, {
-        publicKey: "2w5y7-ykPIlQ-3UQk",
+      .sendForm("service_256r3hg", "template_d6ltnyq", form.current, {
+        publicKey: "wwRhGhhILMvD5mPVf",
       })
       .then(
         () => {
