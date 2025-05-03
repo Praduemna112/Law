@@ -39,12 +39,12 @@ const Navbar = () => {
         <NavLink to="/" className="flex items-center space-x-3">
           <div className="text-white font-bold whitespace-nowrap">
             <h1 className="text-xl block sm:hidden">
-              <span className="text-blue-900">L</span>aw{" "}
-              <span className="text-blue-700">L</span>egends
+              <span className="text-black">L</span>aw{" "}
+              <span className="text-black">L</span>egends
             </h1>
             <h1 className="text-3xl hidden sm:block">
-              <span className="text-blue-700">L</span>aw{" "}
-              <span className="text-blue-700">L</span>egends
+              <span className="text-black">L</span>aw{" "}
+              <span className="text-black">L</span>egends
             </h1>
           </div>
         </NavLink>

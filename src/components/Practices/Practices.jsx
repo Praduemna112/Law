@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import heroBg from "../../assets/low/about.png";
+import heroBg from "../../assets/low/Practices_Img.png";
 
 const Practices = () => {
   return (

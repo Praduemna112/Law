@@ -18,8 +18,8 @@ const Footer = () => {
         <div className="col-span-1 text-center sm:text-left">
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-tr text-white bg-clip-text">
-              <span className="text-blue-700">L</span>aw{" "}
-              <span className="text-blue-700">L</span>egends
+              <span className="text-black">L</span>aw{" "}
+              <span className="text-black">L</span>egends
             </h2>
           </div>
           <p className={`text-base text-white mb-4 ${hoverGradient}`}></p>

@@ -10,6 +10,7 @@ import Adv_Shobhit_shetty from "../../assets/low/Adv_Shobhit_shetty.png";
 import Adv_B_G_Rathod from "../../assets/low/Adv_B_G_Rathod.png";
 import Adv_Nagesh_Birajdar from "../../assets/low/Adv_Nagesh_Birajdar.png";
 import Adv_Shivaji_Singh from "../../assets/low/Adv_Shivaji_Singh.png";
+import Adv_Kailas_Borde from "../../assets/low/dummy.png";
 import Satish from "../../assets/low/Satish.png";
 import heroBg from "../../assets/low/highCourt1.png";
 
@@ -24,7 +25,7 @@ const services = [
   { name: "Adv. B. G. Rathod", img: Adv_B_G_Rathod },
   { name: "Adv. Nagesh Birajdar", img: Adv_Nagesh_Birajdar },
   { name: "Adv. Shivaji Singh", img: Adv_Shivaji_Singh },
-  { name: "Adv. Kailas Borde", img: "" },
+  { name: "Adv. Kailas Borde", img: Adv_Kailas_Borde},
 ];
 
 const Expertise = () => {
