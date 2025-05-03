@@ -26,8 +26,7 @@ const Practices = () => {
           style={{
             backgroundImage: `url(${heroBg})`,
           }}
-        >
-        </div>
+        ></div>
       </div>
 
       {/* Centered Content Section */}
@@ -107,6 +106,15 @@ const Practices = () => {
                       Corporation.
                     </li>
                   </ul>
+                  <li>
+                  <p className="text-black text-2xl">
+                    Law Learning Classes
+                    
+                    </p>
+                 
+                    Our Law Legends are conducting worlds best coaching for Law
+                    Students
+                  </li>
                 </li>
               </ol>
             </div>
