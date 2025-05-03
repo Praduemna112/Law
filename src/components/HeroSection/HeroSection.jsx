@@ -13,16 +13,16 @@ const HeroSection = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="flex flex-col items-center text-center">
-                          <img
-                            src={Notary3}
-                            alt="Adv. Satish Muchalamkar"
-                            className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
-                          />
-                          <p className="text-lg text-white font-bold">
-                            Adv. Satish Muchalamkar
-                          </p>
-                        </div>
+        {/* Notary Image in Top Left */}
+        <div className="absolute top-4 left-4 flex flex-col items-center text-center">
+          <img
+            src={Notary3}
+            alt="Adv. Satish Muchalamkar"
+            className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
+          />
+          <p className="text-lg text-white font-bold">Adv. Satish Muchalamkar</p>
+        </div>
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
