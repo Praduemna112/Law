@@ -24,6 +24,7 @@ const services = [
   { name: "Adv. B. G. Rathod", img: Adv_B_G_Rathod },
   { name: "Adv. Nagesh Birajdar", img: Adv_Nagesh_Birajdar },
   { name: "Adv. Shivaji Singh", img: Adv_Shivaji_Singh },
+  { name: "Adv. Kailas Borde", img: "" },
 ];
 
 const Expertise = () => {

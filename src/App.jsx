@@ -1,11 +1,15 @@
 import { useEffect } from "react";
-import { HashRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 
-import HeroSection from "./components/HeroSection/HeroSection";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-
+import Home from "./components/Home/Home";
 import Practices from "./components/Practices/Practices";
 import Contact from "./components/Contact/Contact";
 import Expertise from "./components/Expertise/Expertise";
@@ -41,9 +45,9 @@ const ScrollRestorationWrapper = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/Practices" element={<Practices />} />
-        <Route path="/Expertise" element={<Expertise />} />
-        <Route path="/Social" element={<Social />} />
+        <Route path="/practices" element={<Practices />} />
+        <Route path="/expertise" element={<Expertise />} />
+        <Route path="/social" element={<Social />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/social/rrb" element={<RRB />} />
         <Route path="/social/blogs" element={<BLOGS />} />
@@ -52,11 +56,5 @@ const ScrollRestorationWrapper = () => {
     </>
   );
 };
-
-const Home = () => (
-  <div>
-    <HeroSection />
-  </div>
-);
 
 export default App;

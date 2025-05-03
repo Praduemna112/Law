@@ -2,6 +2,7 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import Email from "./Email";
+import Notary1 from "../../assets/low/notary1.png";
 
 const Contact = () => {
   return (
@@ -36,6 +37,18 @@ const Contact = () => {
             <ul className="space-y-4 text-sm sm:text-base md:text-lg">
               <li>
                 Drop by the office:
+                <br />
+                <br />
+                <div className="flex flex-col items-center text-center">
+                  <img
+                    src={Notary1}
+                    alt="Adv. Satish Muchalamkar"
+                    className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
+                  />
+                  <p className="text-lg font-bold">
+                    Adv. Satish Muchalamkar
+                  </p>
+                </div>
                 <br />
                 <span className="text-gray-700">
                   S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD,

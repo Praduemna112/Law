@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import facebookIcon from "../../assets/Facebook_icon.png";
 import youtubeIcon from "../../assets/Youtube_icon.png";
+import Notary3 from "../../assets/low/Notary3.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -60,6 +61,19 @@ const Footer = () => {
             >
               <AiOutlineMail className="text-xl sm:text-2xl" />
             </a>
+            <br />
+            <br />
+            <br />
+          </div>
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-center">
+            <img
+              src={Notary3}
+              alt="Adv. Satish Muchalamkar"
+              className="w-32 h-32 rounded-full object-cover mb-2 shadow-md ml-11" // <-- added ml-4
+            />
+            <p className="text-lg font-bold text-black items-center text-center">
+              Adv. Satish Muchalamkar
+            </p>
           </div>
         </div>
 
@@ -91,8 +105,8 @@ const Footer = () => {
           <div className="col-span-1 sm:col-span-1 mb-6 md:mb-0">
             <h3 className="font-bold mb-3 text-lg sm:text-xl">Contact</h3>
             <p className={`text-sm sm:text-base break-words ${hoverGradient}`}>
-              Main Office: S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD, OPP - CIPLA
-              BUS STOP, NEAR – MAULI MEDICAL, WARJE, PUNE-411058
+              Main Office: S. NO. 118, A-2, GROUND FLOOR, CIPLA ROAD, OPP -
+              CIPLA BUS STOP, NEAR – MAULI MEDICAL, WARJE, PUNE-411058
             </p>
             <p className="text-sm sm:text-base mt-2">Mobile no: 9168111181</p>
             <p className="text-sm sm:text-base">Email: advssmd1975@gmail.com</p>
