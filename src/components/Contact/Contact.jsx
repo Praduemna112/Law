@@ -2,7 +2,7 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import Email from "./Email";
-import Notary1 from "../../assets/low/notary1.png";
+import Notary1 from "../../assets/low/Notary1.png";
 
 const Contact = () => {
   return (

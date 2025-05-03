@@ -1,5 +1,6 @@
 import React from "react";
 import heroBg from "../../assets/low/hero.png";
+import Notary3 from "../../assets/low/Notary3.png";
 
 const HeroSection = () => {
   return (
@@ -12,6 +13,16 @@ const HeroSection = () => {
           backgroundSize: "cover",
         }}
       >
+        <div className="flex flex-col items-center text-center">
+                          <img
+                            src={Notary3}
+                            alt="Adv. Satish Muchalamkar"
+                            className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
+                          />
+                          <p className="text-lg text-white font-bold">
+                            Adv. Satish Muchalamkar
+                          </p>
+                        </div>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
