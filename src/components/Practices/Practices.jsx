@@ -107,13 +107,9 @@ const Practices = () => {
                     </li>
                   </ul>
                   <li>
-                  <p className="text-black text-2xl">
-                    Law Learning Classes
-                    
-                    </p>
-                 
-                    Our Law Legends are conducting worlds best coaching for Law
-                    Students
+                    <span className="font-bold">Law Learning Classes</span> –
+                    Our Law Legends are conducting the world's best coaching for
+                    law students.
                   </li>
                 </li>
               </ol>
