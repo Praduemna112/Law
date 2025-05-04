@@ -27,38 +27,50 @@ const Footer = () => {
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr"
+              className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr hover:from-blue-600 hover:via-purple-500 hover:to-blue-400"
             >
-              <img
-                src={facebookIcon}
-                alt="Facebook"
-                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 object-contain p-1"
-              />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center">
+                <img
+                  src={facebookIcon}
+                  alt="Facebook"
+                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                />
+              </div>
             </a>
+
             <a
               href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr"
+              className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr hover:from-red-600 hover:via-rose-500 hover:to-red-400"
             >
-              <img
-                src={youtubeIcon}
-                alt="YouTube"
-                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 object-contain p-1"
-              />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center">
+                <img
+                  src={youtubeIcon}
+                  alt="YouTube"
+                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                />
+              </div>
             </a>
+
             <a
-              href="https://wa.me/+919168111181"
+              href="https://wa.me/919168111181?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20legal%20services."
               target="_blank"
-              className="text-green-600 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 flex items-center justify-center p-1"
+              className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr hover:from-green-600 hover:via-green-500 hover:to-green-500"
             >
-              <FaWhatsapp className="text-xl sm:text-2xl" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center">
+                <FaWhatsapp className="text-xl sm:text-2xl text-green-600" />
+              </div>
             </a>
+
             <a
               href="mailto:advssmd1975@gmail.com"
-              className="text-blue-600 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 flex items-center justify-center p-1"
+              target="_blank"
+              className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr hover:from-blue-500 hover:via-cyan-400 hover:to-sky-600"
             >
-              <AiOutlineMail className="text-xl sm:text-2xl" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center">
+                <AiOutlineMail className="text-xl sm:text-2xl text-blue-600" />
+              </div>
             </a>
           </div>
           <div className="flex flex-col items-center sm:items-start text-center sm:text-center mt-4">
@@ -89,11 +101,6 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link to="/Enquire" className={hoverGradient}>
-                  Enquire Now
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -108,7 +115,7 @@ const Footer = () => {
             <p className="text-sm sm:text-base">Email: advssmd1975@gmail.com</p>
             <p className="mt-2">
               <a
-                href="https://maps.app.goo.gl/JjZmPE93rFyCaDnj6"
+                href="https://maps.app.goo.gl/EThG9Teugc1PjecFA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center sm:justify-start text-sm sm:text-base ${hoverGradient}`}

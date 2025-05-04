@@ -3,6 +3,9 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import Email from "./Email";
 import Notary1 from "../../assets/low/Notary1.png";
+import { FaMapMarkerAlt } from "react-icons/fa";
+
+const hoverGradient = "duration-300 hover:text-black hover:underline";
 
 const Contact = () => {
   return (
@@ -11,8 +14,8 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row gap-10">
           {/* LEFT: Map + Email */}
           <div className="w-full lg:w-2/3 bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md">
-          <p className="text-2xl font-bold mb-4">Location:-</p>
-            {/* Map */} 
+            <p className="text-2xl font-bold mb-4">Location:-</p>
+            {/* Map */}
             <div className="w-full mb-6">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.02829517154578!2d73.79874176558258!3d18.48731584651019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf23e39880e3%3A0x694aa0978f13aaa8!2sSairam%20Park!5e1!3m2!1sen!2sin!4v1746191832985!5m2!1sen!2sin"
@@ -46,9 +49,7 @@ const Contact = () => {
                     alt="Adv. Satish Muchalamkar"
                     className="w-32 h-32 rounded-full object-cover mb-4 shadow-md"
                   />
-                  <p className="text-lg font-bold">
-                    Adv. Satish Muchalamkar
-                  </p>
+                  <p className="text-lg font-bold">Adv. Satish Muchalamkar</p>
                 </div>
                 <br />
                 <span className="text-gray-700">
@@ -61,12 +62,13 @@ const Contact = () => {
               </li>
               <li>
                 <a
-                  href="https://maps.app.goo.gl/JjZmPE93rFyCaDnj6"
+                  href="https://maps.app.goo.gl/EThG9Teugc1PjecFA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 underline hover:text-orange-600"
+                  className={`flex items-center justify-center sm:justify-start text-sm sm:text-base ${hoverGradient}`}
                 >
                   Get Directions
+                  <FaMapMarkerAlt className="ml-2 text-red-600" />
                 </a>
               </li>
               <li>Or reach us at:</li>
@@ -79,7 +81,6 @@ const Contact = () => {
                 <a
                   href="https://wa.me/9168111181?text=Hi%20there%2C%20I'm%20interested%20in%20your%20services"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="text-black hover:text-orange-600 underline"
                 >
                   +91 9168111181
