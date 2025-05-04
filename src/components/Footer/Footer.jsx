@@ -26,7 +26,6 @@ const Footer = () => {
             <a
               href="https://www.facebook.com/"
               target="_blank"
-              rel="noopener noreferrer"
               className="p-[2px] rounded-full transition-all duration-300 hover:bg-gradient-to-tr hover:from-blue-600 hover:via-purple-500 hover:to-blue-400"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center">
